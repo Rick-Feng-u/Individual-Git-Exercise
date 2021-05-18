@@ -42,6 +42,32 @@ public class unitTesting {
     }
     Assertions.assertTrue(true);
   }
+
+  @Test
+  public void testBubbleSort() {
+    System.out.println("\t" + "Unsorted");
+    for (Integer i : numbers) {
+      System.out.println(i + " ");
+    }
+    long startTime = System.currentTimeMillis();
+
+    BubbleSort sorter = new BubbleSort();
+    sorter.bubbleSort(numbers);
+
+    long stopTime = System.currentTimeMillis();
+    long elapsedTime = stopTime - startTime;
+    System.out.println("\t" + "Sorted");
+    for (Integer i : numbers) {
+      System.out.println(i + " ");
+    }
+    System.out.println("\t" + "Time takes for Bubbelsort " + elapsedTime);
+
+    if (!validate(numbers)) {
+      Assertions.fail("Should not happen");
+    }
+    Assertions.assertTrue(true);
+  }
+
   private boolean validate(int[] numbers) { // this validate if the sorted array is actually sorted
     for (int i = 0; i < numbers.length - 1; i++) {
       if (numbers[i] > numbers[i + 1]) {
