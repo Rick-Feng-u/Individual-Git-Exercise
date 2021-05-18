@@ -19,10 +19,18 @@ public class sortingArray {
     num[i] = input.nextInt();
    }
    input.close();
+   int[] num2 = num.clone();
+
+
    BubbleSort ob = new BubbleSort();
    ob.bubbleSort(num);
    System.out.println("Sorted array(BubbleSort)");
    printArray(num);
+
+   Quicksort qs = new Quicksort();
+   qs.sort(num2);
+   System.out.println("Sorted array(QuickSort)");
+   printArray(num2);
   }
  }
  public static void printArray(int arr[])
