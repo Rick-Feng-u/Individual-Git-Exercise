@@ -3,7 +3,7 @@ import java.util.*;
 public class sortingArray {
 
  public static void main(String[] args) {
-  int count, temp;
+  int count;
 
   Scanner input = new Scanner(System.in);
   System.out.print("type 1 for unit test demo, type 2 for array input ");
