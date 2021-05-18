@@ -21,6 +21,8 @@ public class sortingArray {
    input.close();
    int[] num2 = num.clone();
 
+   // this is a comment for demo
+
    BubbleSort ob = new BubbleSort();
    ob.bubbleSort(num);
    System.out.println("Sorted array(BubbleSort)");
