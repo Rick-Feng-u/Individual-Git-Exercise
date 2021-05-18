@@ -3,7 +3,7 @@ import java.util.*;
 public class sortingArray {
 
  public static void main(String[] args) {
-  int count, temp;
+  int count;
 
   Scanner input = new Scanner(System.in);
   System.out.print("type 1 for unit test demo, type 2 for array input ");
@@ -19,7 +19,17 @@ public class sortingArray {
     num[i] = input.nextInt();
    }
    input.close();
+   BubbleSort ob = new BubbleSort();
+   ob.bubbleSort(num);
+   System.out.println("Sorted array(BubbleSort)");
+   printArray(num);
   }
  }
-
-}
+ public static void printArray(int arr[])
+ {
+  int n = arr.length;
+  for (int i=0; i<n; ++i)
+   System.out.print(arr[i] + " ");
+  System.out.println();
+ }
+  }
